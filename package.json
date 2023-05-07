@@ -1,0 +1,14 @@
+{
+  "author": "André Sá de Mello <asmello@pm.me>",
+  "name": "webpack-rs",
+  "version": "0.1.0",
+  "repository": "https://github.com/asmello/webpack-rs",
+  "license": "(MIT OR Apache-2.0)",
+  "bin": {
+    "create-rust-webpack": "./bin/create-rust-webpack.js"
+  },
+  "dependencies": {
+    "cpr": "^3.0.1",
+    "rimraf": "^5.0.0"
+  }
+}
