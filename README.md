@@ -13,9 +13,15 @@
 This template is designed for creating monorepo-style Web applications with
 Rust-generated WebAssembly and Webpack without publishing your wasm to NPM.
 
-## 🚴 Using This Template
+## Installation
 
-You can use this template with `npm init`:
+```sh
+npm install webpack-rs@latest
+```
+
+## Usage
+
+You can use this project generator with `npm init`:
 
 ```sh
 npm init rust-webpack my-app
