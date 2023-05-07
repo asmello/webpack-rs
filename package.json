@@ -1,8 +1,8 @@
 {
   "author": "André Sá de Mello <asmello@pm.me>",
-  "name": "webpack-rs",
+  "name": "rust-web-bootstrapper",
   "version": "0.1.0",
-  "repository": "https://github.com/asmello/webpack-rs",
+  "repository": "https://github.com/asmello/rust-web-bootstrapper",
   "license": "(MIT OR Apache-2.0)",
   "bin": {
     "create-rust-webpack": "./bin/create-rust-webpack.js"

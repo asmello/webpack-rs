@@ -66,7 +66,7 @@ run("git", [
   "--no-tags",
   "--depth",
   "1",
-  "https://github.com/asmello/webpack-rs.git",
+  "https://github.com/asmello/rust-web-bootstrapper.git",
   gitFolder,
 ]);
 

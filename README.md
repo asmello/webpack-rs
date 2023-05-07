@@ -1,6 +1,6 @@
 <div align="center">
 
-  <h1><code>webpack-rs</code></h1>
+  <h1><code>rust-web-bootstrapper</code></h1>
 
 <strong>Bootstrap your Rust, WebAssembly and Webpack projects!</strong>
 
@@ -16,7 +16,7 @@ Rust-generated WebAssembly and Webpack without publishing your wasm to NPM.
 ## Installation
 
 ```sh
-npm install webpack-rs@latest
+npm install rust-web-bootstrapper@latest
 ```
 
 ## Usage
