@@ -1,14 +1,27 @@
 {
   "author": "André Sá de Mello <asmello@pm.me>",
-  "name": "rust-web-bootstrapper",
+  "name": "create-rust-web-project",
+  "description": "Bootstrap your Rust, WebAssembly, and Webpack project!",
   "version": "0.1.0",
-  "repository": "https://github.com/asmello/rust-web-bootstrapper",
-  "license": "(MIT OR Apache-2.0)",
-  "bin": {
-    "create-rust-webpack": "./bin/create-rust-webpack.js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asmello/rust-web-bootstrapper"
   },
-  "dependencies": {
-    "cpr": "^3.0.1",
-    "rimraf": "^5.0.0"
-  }
+  "bugs": {
+    "url": "https://github.com/asmello/rust-web-bootstrapper/issues"
+  },
+  "homepage": "https://github.com/asmello/rust-web-bootstrapper",
+  "license": "(MIT OR Apache-2.0)",
+  "bin": "./src/create-rust-web-project.js",
+  "files": [
+    "template/**",
+    "LICENSE*"
+  ],
+  "scripts": {
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+  },
+  "devDependencies": {
+    "jest": "^29.5.0"
+  },
+  "type": "module"
 }

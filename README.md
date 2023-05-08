@@ -10,21 +10,15 @@
 
 ## About
 
-This template is designed for creating monorepo-style Web applications with
+This bootstrapper is designed for creating monorepo-style Web applications with
 Rust-generated WebAssembly and Webpack without publishing your wasm to NPM.
-
-## Installation
-
-```sh
-npm install rust-web-bootstrapper@latest
-```
 
 ## Usage
 
-You can use this project generator with `npm init`:
+You can use this project bootstrapper with `npm init`:
 
 ```sh
-npm init rust-webpack my-app
+npm init rust-web-project my-app
 ```
 
 For now you can use the [original project's documentation]([https://rustwasm.github.io/docs/wasm-pack/tutorials/hybrid-applications-with-webpack/index.html]) to learn about the generated project's layout.
