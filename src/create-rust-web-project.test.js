@@ -78,7 +78,9 @@ test("should build successfully", () => {
 });
 
 test("should create bundle successfully", () => {
-  expect(run("npm", ["run", "build"], { cwd: targetPath })).toEqual(0);
+  expect(
+    run("npm", ["run", "build"], { cwd: targetPath, shell: true })
+  ).toEqual(0);
   expect(existsSync(join(targetPath, "pkg", "index.js"))).toBeTruthy();
 });
 
