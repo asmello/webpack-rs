@@ -12,11 +12,12 @@ env:
 jobs:
   node-test:
     name: Node
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         node-version: [18.x, 20.x]
+        os: [ubuntu-latest, macos-latest, windows-latest]
 
     steps:
       - name: Checkout
