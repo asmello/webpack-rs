@@ -1,10 +1,12 @@
-const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
-const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin");
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+import CopyPlugin from "copy-webpack-plugin";
+import WasmPackPlugin from "@wasm-tool/wasm-pack-plugin";
 
-const dist = path.resolve(__dirname, "dist");
+const localDir = dirname(fileURLToPath(import.meta.url));
+const dist = resolve(localDir, "dist");
 
-module.exports = {
+export default {
   mode: "production",
   experiments: {
     futureDefaults: true,
@@ -21,10 +23,10 @@ module.exports = {
   },
   plugins: [
     new CopyPlugin({
-      patterns: [path.resolve(__dirname, "static")],
+      patterns: [resolve(localDir, "static")],
     }),
     new WasmPackPlugin({
-      crateDirectory: __dirname,
+      crateDirectory: localDir,
     }),
   ],
 };
