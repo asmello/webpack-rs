@@ -2,9 +2,12 @@ name: CI Checks
 
 on:
   push:
-    branches: [ main ]
+    branches: [ $default-branch ]
   pull_request:
-    branches: [ main ]
+    branches: [ $default-branch ]
+
+env:
+  CARGO_TERM_COLOR: always
 
 jobs:
   test:
@@ -24,4 +27,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
       - run: npm ci
+      - name: Install Rust toolchain
+        uses: actions-rs/toolchain@v1
       - run: npm test
