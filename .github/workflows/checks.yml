@@ -25,6 +25,7 @@ jobs:
         uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
+          profile: minimal
       - name: Install wasm-pack
         run: tests/ci/get-wasm-pack.sh
       - name: Use Node.js ${{ matrix.node-version }}
