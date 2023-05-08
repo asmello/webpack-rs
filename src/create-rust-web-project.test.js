@@ -17,11 +17,10 @@ let targetPath;
 
 beforeAll(() => {
   targetPath = mkdtempSync(join(tmpdir(), "tmp-rust-web-project-dir-"));
-  const status = run(
-    "node",
-    [join("src", "create-rust-web-project.js")],
-    [targetPath]
-  );
+  const status = run("node", [
+    join("src", "create-rust-web-project.js"),
+    targetPath,
+  ]);
   if (status !== 0) {
     rmSync(targetPath, { recursive: true });
     // workaround for https://github.com/jestjs/jest/issues/6695
