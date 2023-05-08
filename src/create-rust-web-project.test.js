@@ -17,7 +17,7 @@ let targetPath;
 
 beforeAll(() => {
   targetPath = mkdtempSync(join(tmpdir(), "tmp-rust-web-project-dir-"));
-  const status = run("src/create-rust-web-project.js", [targetPath]);
+  const status = run(join("src", "create-rust-web-project.js"), [targetPath]);
   if (status !== 0) {
     rmSync(targetPath, { recursive: true });
     // workaround for https://github.com/jestjs/jest/issues/6695
@@ -46,19 +46,19 @@ test.concurrent("should contain README file", async () => {
 });
 
 test.concurrent("should contain index.html file", async () => {
-  expect(existsSync(join(targetPath, "static/index.html"))).toBeTruthy();
+  expect(existsSync(join(targetPath, "static", "index.html"))).toBeTruthy();
 });
 
 test.concurrent("should contain index.js file", async () => {
-  expect(existsSync(join(targetPath, "js/index.js"))).toBeTruthy();
+  expect(existsSync(join(targetPath, "js", "index.js"))).toBeTruthy();
 });
 
 test.concurrent("should contain lib.rs file", async () => {
-  expect(existsSync(join(targetPath, "src/lib.rs"))).toBeTruthy();
+  expect(existsSync(join(targetPath, "src", "lib.rs"))).toBeTruthy();
 });
 
 test.concurrent("should contain app.rs file", async () => {
-  expect(existsSync(join(targetPath, "tests/app.rs"))).toBeTruthy();
+  expect(existsSync(join(targetPath, "tests", "app.rs"))).toBeTruthy();
 });
 
 test.concurrent("should contain .gitignore file", async () => {
@@ -76,7 +76,7 @@ test("should build successfully", () => {
 
 test("should create bundle successfully", () => {
   expect(run("npm", ["run", "build"], { cwd: targetPath })).toEqual(0);
-  expect(existsSync(join(targetPath, "pkg/index.js"))).toBeTruthy();
+  expect(existsSync(join(targetPath, "pkg", "index.js"))).toBeTruthy();
 });
 
 test("should run tests successfully", () => {
