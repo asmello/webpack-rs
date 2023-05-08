@@ -1,10 +1,12 @@
 <div align="center">
 
   <h1><code>rust-web-bootstrapper</code></h1>
+  
+  [![CI Checks](https://github.com/asmello/rust-web-bootstrapper/actions/workflows/checks.yml/badge.svg)](https://github.com/asmello/rust-web-bootstrapper/actions/workflows/checks.yml)
 
-<strong>Bootstrap your Rust, WebAssembly and Webpack projects!</strong>
+  <strong>Bootstrap your Rust, WebAssembly and Webpack projects!</strong>
 
-<sub>Forked from <a href="https://github.com/rustwasm/rust-webpack-template"><code>rust-webpack-template</code></a> due to the original project being abandoned.</sub>
+  <sub>Forked from <a href="https://github.com/rustwasm/rust-webpack-template"><code>rust-webpack-template</code></a> due to the original project being abandoned.</sub>
 
 </div>
 
