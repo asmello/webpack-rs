@@ -29,4 +29,6 @@ jobs:
       - run: npm ci
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
       - run: npm test
