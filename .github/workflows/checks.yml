@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-
+    name: Node Tests
     runs-on: ubuntu-latest
 
     strategy:
@@ -16,7 +16,8 @@ jobs:
         node-version: [18.x, 20.x]
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
